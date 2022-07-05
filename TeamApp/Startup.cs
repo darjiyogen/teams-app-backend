@@ -53,6 +53,8 @@ namespace TeamApp
             app.UseSwagger();
             app.UseSwaggerUI();
 
+            app.UseCors(options => options.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
